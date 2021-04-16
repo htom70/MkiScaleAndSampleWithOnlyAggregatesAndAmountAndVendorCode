@@ -1,0 +1,42 @@
+create table  if not exists metrics
+(
+    id bigint not null auto_increment,
+    train_database_name     varchar(255),
+    test_database_name      varchar(255),
+    sampler_name            varchar(255),
+    scaler_name             varchar(255),
+    feature_selector_name   varchar(255),
+    model_name              varchar(255),
+    samppling_time          double precision,
+    scaling_time            double precision,
+    feature_selection_time  double precision,
+    model_fit_time          double precision,
+    selected_feature_number int,
+    TP                      int,
+    FP                      int,
+    TN                      int,
+    FN                      int,
+    sensitivity             double precision,
+    specificity             double precision,
+    accuracy                double precision,
+    balanced_accuracy       double precision,
+    prec                    double precision,
+    recall                  double precision,
+    PPV                     double precision,
+    NPV                     double precision,
+    FNR                     double precision,
+    FPR                     double precision,
+    FDR                     double precision,
+    F_OR                    double precision,
+    f1                      double precision,
+    f_05                    double precision,
+    f2                      double precision,
+    MCC                     double precision,
+    ROCAUC                  double precision,
+    Youdens_statistic       double precision,
+    begin_time              datetime,
+    primary key (id)
+    ) engine = InnoDB
+
+
+
